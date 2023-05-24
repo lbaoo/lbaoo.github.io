@@ -266,9 +266,9 @@ body::after {
    
     cursor: pointer;
 }
-.btn-Follow, .btn-Message {
+.btn-Follow,
+.btn-Message {
   position: relative;
-  overflow: hidden;
   display: inline-block;
   border: none;
   background-color: transparent;
@@ -277,35 +277,42 @@ body::after {
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
+  perspective: 1000px;
   transition: 0.3s;
 }
 
-.btn-Follow:before, .btn-Message:before {
+.btn-Follow:before,
+.btn-Message:before {
   content: '';
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
-  height: 0;
+  height: 100%;
   background-color: #FFF;
   z-index: -1;
   transition: 0.3s;
+  transform: translateZ(-50px);
 }
 
-.btn-Follow:hover:before, .btn-Message:hover:before {
-  height: 100%;
-}
-
-.btn-Follow a, .btn-Message a {
+.btn-Follow a,
+.btn-Message a {
   position: relative;
   z-index: 1;
   color: #FFF;
   text-decoration: none;
 }
 
-.btn-Follow:hover, .btn-Message:hover {
-  color: #000;
+.btn-Follow:hover,
+.btn-Message:hover {
+  transform: rotateX(-10deg) rotateY(10deg) translateZ(10px);
 }
+
+.btn-Follow:hover:before,
+.btn-Message:hover:before {
+  transform: translateZ(0);
+}
+
 
 .skills .fa-brands {
     cursor: pointer;
