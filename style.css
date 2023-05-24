@@ -266,36 +266,47 @@ body::after {
    
     cursor: pointer;
 }
-.btn-Follow a{
-    text-decoration: none;
-    color: black;
+.btn-Follow, .btn-Message {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  border: none;
+  background-color: transparent;
+  color: #FFF;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
 }
-.btn-Follow{
-    background-color: rgb(36, 219, 36);
-    border-radius: 1px;
-    border: none;
+
+.btn-Follow:before, .btn-Message:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0;
+  background-color: #FFF;
+  z-index: -1;
+  transition: 0.3s;
 }
-.btn-Follow:hover{
-    background-color:  rgb(2, 250, 2);
-    
+
+.btn-Follow:hover:before, .btn-Message:hover:before {
+  height: 100%;
 }
-.btn-Message a{
-    text-decoration: none;
-    color: rgb(36, 219, 36);
+
+.btn-Follow a, .btn-Message a {
+  position: relative;
+  z-index: 1;
+  color: #FFF;
+  text-decoration: none;
 }
-.btn-Message a:hover{
-    color: #000;
+
+.btn-Follow:hover, .btn-Message:hover {
+  color: #000;
 }
-.btn-Message{
-    border: 1px solid rgb(36, 219, 36);
-    border-radius: 3px;
-    background-color: transparent;
-    color: #fff;
-}
-.btn-Message:hover{
-    background-color:  rgb(2, 250, 2);
-    color: red;
-}
+
 .skills .fa-brands {
     cursor: pointer;
     position: relative;
