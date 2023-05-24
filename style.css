@@ -289,7 +289,7 @@ body::after {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: #FFF;
+  background-color: rgba(255, 255, 255, 0.2); /* Thay đổi màu nền ở đây */
   z-index: -1;
   transition: 0.3s;
   transform: translateZ(-50px);
@@ -312,7 +312,6 @@ body::after {
 .btn-Message:hover:before {
   transform: translateZ(0);
 }
-
 
 .skills .fa-brands {
     cursor: pointer;
