@@ -12,6 +12,62 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <!-- Custom CSS file -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            animation: moveContainer 3s ease-in-out forwards;
+        }
+
+        .card {
+            transform: translateX(-200%);
+            opacity: 0;
+            transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+        }
+
+        .container.move .card {
+            transform: translateX(0%);
+            opacity: 1;
+        }
+
+        @keyframes moveContainer {
+            0% {
+                transform: translateY(-200%);
+            }
+            100% {
+                transform: translateY(0%);
+            }
+        }
+
+        .icons {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .container.move .icons {
+            opacity: 1;
+        }
+
+        .icon {
+            animation: rotateIcon 3s infinite linear;
+        }
+
+        @keyframes rotateIcon {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .icon i {
+            color: #000;
+            transition: color 0.5s ease-in-out;
+        }
+
+        .icon:hover i {
+            color: #ff3366;
+        }
+    </style>
 </head>
 <body>
     <video autoplay muted plays-inline loop>
@@ -19,7 +75,7 @@
     </video>
     <div class="container">
         <button class="call"><i class="fa-solid fa-phone"></i></button>
-        <div class="card move">
+        <div class="card">
             <div class="imgbox">
                 <img src="./img/meo.jpg" alt="">
             </div>
@@ -69,25 +125,15 @@
     </div>
     <script>
         var container = document.querySelector('.container');
-        var icons = document.querySelector('.icons');
         var call = document.querySelector('.call');
-        var body = document.querySelector('body');
-        var card = document.querySelector('.card');
 
         setTimeout(function(){
             container.classList.add('move');
         }, 3000);
 
         setTimeout(function(){
-            icons.style.opacity = "0";
             call.style.opacity = "0";
         }, 2000);
-
-        setTimeout(function(){
-            card.classList.remove('move');
-            icons.style.opacity = "1";
-            call.style.opacity = "1";
-        }, 6000);
     </script>
 </body>
 </html>
