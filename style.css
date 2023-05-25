@@ -172,13 +172,14 @@ body::after {
 .card.move{
     width: 120px;
     height: 120px;
+    -webkit-border-radius: 50%;
     border-radius: 50%;
-    overflow: hidden;
+    overflow: visible;
     padding: 0px;
     
 }
-.card.move .imgbox{
-    transform: translateY(0);
+.card.move .imgbox {
+    -webkit-transform: translateY(0);
 }
 .card.move.card:before{
     opacity: 0;
@@ -190,7 +191,7 @@ body::after {
     width: 70px;
     height: 400px;
     background-color: #FFFB;
-    transform: rotate(38deg) translateY(-25%);
+    -webkit-transform: rotate(38deg) translateY(-25%);
     z-index: 1;
 }
 .container:hover .card:before {
@@ -209,7 +210,8 @@ body::after {
     height: 115px;
     border: 5px solid transparent;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.533);
-    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: unset;
     overflow: hidden;
     text-align: center;
     transition: 1s;
