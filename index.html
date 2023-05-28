@@ -12,6 +12,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <!--my css file-->
     <link rel="stylesheet" href="style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+  $('.call').on('click', function() {
+    $(this).toggleClass('active');
+    $(this).next('.card').toggleClass('active');
+    $(this).next('.icons').toggleClass('active');
+  });
+});
+</script>
 </head>
 <body >
     <video autoplay muted playsinline loop>
@@ -70,6 +80,9 @@
 
         </div>
     </div>
+<div class="call"></div>
+<div class="card"></div>
+<div class="icons"></div>
 
 </body>
 </html>
