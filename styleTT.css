@@ -22,7 +22,10 @@ ul {
   width: 800px;
   align-items: center;
   list-style-type: none;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 
 ul li {
   position: relative;
