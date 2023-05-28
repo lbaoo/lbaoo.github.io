@@ -4,35 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Card</title>
-    <!--font awasome icons-->
+    <title>Combined HTML</title>
+    <!--font awesome icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <!--my css file-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!--my css files-->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleTT.css">
 </head>
-<body >
+<body>
     <video autoplay muted playsinline loop>
         <source src="./img/video (2).mp4" type="video/mp4">
     </video>
     <div class="container">
         <button class="call"><i class="fa-solid fa-phone"></i></button>
-    <div class="card move">
-       <div class="imgbox">
-          <img src="./img/meo.jpg" alt="">
-       </div>
-       <div class="name-job">
-          <h3>Lưu Gia Bảo</h3>
-          <h5>Developer</h5>
-        </div>
-        <div class="skills">
-  <button class="btn-Follow"><a href="https://instagram.com/baoluu.312?igshid=MzNlNGNkZWQ4Mg==" target="_blank">Follow</a></button>
-  <button class="btn-Message"><a href="https://www.facebook.com/profile.php?id=100070488903790" target="_blank">Message</a></button>
-</div>
-
-
+        <div class="card move">
+            <div class="imgbox">
+                <img src="./img/meo.jpg" alt="">
+            </div>
+            <div class="name-job">
+                <h3>Lưu Gia Bảo</h3>
+                <h5>Developer</h5>
+            </div>
+            <div class="skills">
+                <button class="btn-Follow"><a href="https://instagram.com/baoluu.312?igshid=MzNlNGNkZWQ4Mg==" target="_blank">Follow</a></button>
+                <button class="btn-Message"><a href="https://www.facebook.com/profile.php?id=100070488903790" target="_blank">Message</a></button>
+            </div>
         </div>
         <div class="icons">
             <div class="icon">
@@ -60,37 +59,60 @@
                 <i class="fa-brands fa-facebook-f bottom"></i>
             </div>
             <div class="icon">
-    <i class="fa-brands fa-instagram front"></i>
-    <i class="fa-brands fa-instagram back"></i>
-    <i class="fa-brands fa-instagram left"></i>
-    <i class="fa-brands fa-instagram right"></i>
-    <i class="fa-brands fa-instagram top"></i>
-    <i class="fa-brands fa-instagram bottom"></i>
-</div>
-
+                <i class="fa-brands fa-instagram front"></i>
+                <i class="fa-brands fa-instagram back"></i>
+                <i class="fa-brands fa-instagram left"></i>
+                <i class="fa-brands fa-instagram right"></i>
+                <i class="fa-brands fa-instagram top"></i>
+                <i class="fa-brands fa-instagram bottom"></i>
+            </div>
         </div>
     </div>
+    <ul>
+        <li style="--color: #ef436b">
+            <span class="base"></span>
+            <span class="title">Bùi</span>
+            <span class="icon">
+                <ion-icon name="logo-html5"></ion-icon>
+            </span>
+        </li>
+        <li style="--color: #ffce5c">
+            <span class="base"></span>
+            <span class="title">Thanh</span>
+            <span class="icon">
+                <ion-icon name="logo-css3"></ion-icon>
+            </span>
+        </li>
+        <li style="--color: #05c770">
+            <span class="base"></span>
+            <span class="title">Đạt</span>
+            <span class="icon">
+                <ion-icon name="logo-javascript"></ion-icon>
+            </span>
+        </li>
+    </ul>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        var container = document.querySelector('.container');
+        var icons = document.querySelector('.icons');
+        var call = document.querySelector('.call');
+        var body = document.querySelector('body');
+        var card = document.querySelector('.card');
+
+        setTimeout(function () {
+            container.classList.add('move');
+        }, 3000);
+
+        setTimeout(function () {
+            icons.style.opacity = "0";
+            call.style.opacity = "0";
+        }, 2000);
+
+        setTimeout(function () {
+            card.classList.remove('move');
+            icons.style.opacity = "1";
+            call.style.opacity = "1";
+        }, 6000);
+    </script>
 </body>
 </html>
-<script>
-    var container=document.querySelector('.container')
-    var icons=document.querySelector('.icons')
-    var call=document.querySelector('.call')
-    var body =document.querySelector('body')
-    var card=document.querySelector('.card')
-    // body.addEventListener('onload',function(){
-        setTimeout(function(){
-        container.classList.add('move')
-    },3000)
-    // })
-   setTimeout(function(){
-    icons.style="opacity: 0"
-    call.style="opacity: 0"
-   },2000)
-   setTimeout(function(){
-    card.classList.remove('move')
-    icons.style="opacity: 1"
-    call.style="opacity: 1"
-   },6000)
-    
-</script>
