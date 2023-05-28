@@ -347,13 +347,13 @@ body::after {
     z-index: 1;
     transition: 0.4s;
 }
-.call:click {
+.call:focus {
     transform: rotateY(45deg) translateX(120px) translateZ(-70px);
 }
-.call:click ~ .card {
+.call:focus ~ .card {
     transform: rotateY(45deg) translateX(140px) translateZ(-120px);
 }
-.call:click ~ .icons {
+.call:focus ~ .icons {
     height: var(--height);
     transform: translateZ(var(--i-width)) translateY(-50%);
 }
