@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Image API Example</title>
+</head>
+<body>
+  <h1>Random Image API Example</h1>
+  <button onclick="fetchRandomImage()">Get Random Image</button>
+  <div id="imageContainer"></div>
+
+  <script>
+    function fetchRandomImage() {
+      fetch('/random-image')
+        .then(response => response.json())
+        .then(data => {
+          const imageUrl = data.image_url;
+          const imageElement = document.createElement('img');
+          imageElement.src = imageUrl;
+          document.getElementById('imageContainer').appendChild(imageElement);
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    }
+  </script>
+</body>
+</html>
