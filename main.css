@@ -41,7 +41,14 @@ body {
     transform: translate(-50%, -50%);
     transition: .5s;
 }
-
+.center-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 10vh;
+      font-family: 'Lobster', cursive !important;
+      font-size: 37px;
+    }
 .contentLetter::-webkit-scrollbar {
     background-color: white;
     width: 4px;
