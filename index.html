@@ -13,6 +13,17 @@
 
 
   <link rel="stylesheet" href="./main.css">
+<style>
+    .center-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      font-family: 'Lobster', cursive;
+      font-size: 37px;
+    }
+  </style>
   <title>Some</title>
 </head>
 <body>
@@ -31,8 +42,10 @@
     <img class="balloon1 balloon" src="./img/PNGkhothietke.net-02776.png" alt="">
     <img class="balloon2 balloon" src="./img/PNGkhothietke.net-02776.png" alt="">
     <img class="bannerParty" src="./img/makeupspa-kit-theme-happy-birthday-bunting-paper-banner-party-supply-261454.png" alt="">
-    <div class='center boxs' id='boxs'>
-    <div style="font-size: 40px">
+    <audio controls class="audio">
+  <source src="https://files.catbox.moe/stmi8k.mp3" type="audio/mpeg">
+</audio>
+     <div style="font-family: 'Lobster', cursive; font-size: 37px;">
 <script type="text/javascript">
 farbbibliothek = new Array();
 farbbibliothek[0] = new Array("#FF0000","#FF1100","#FF2200","#FF3300","#FF4400","#FF5500","#FF6600","#FF7700","#FF8800","#FF9900","#FFaa00","#FFbb00","#FFcc00","#FFdd00","#FFee00","#FFff00","#FFee00","#FFdd00","#FFcc00","#FFbb00","#FFaa00","#FF9900","#FF8800","#FF7700","#FF6600","#FF5500","#FF4400","#FF3300","#FF2200","#FF1100");
@@ -43,13 +56,13 @@ farbbibliothek[4] = new Array("#FF0000","#EE0000","#DD0000","#CC0000","#BB0000",
 farbbibliothek[5] = new Array("#000000","#000000","#000000","#FFFFFF","#FFFFFF","#FFFFFF");
 farbbibliothek[6] = new Array("#0000FF","#FFFF00");
 farben = farbbibliothek[4];
-function farbschrift(){for(var b=0;b<Buchstabe.length;b++){document.all["a"+b].style.color=farben[b]}farbverlauf()}function string2array(b){Buchstabe=new Array();while(farben.length<b.length){farben=farben.concat(farben)}k=0;while(k<=b.length){Buchstabe[k]=b.charAt(k);k++}}function divserzeugen(){for(var b=0;b<Buchstabe.length;b++){document.write("<span id='a"+b+"' class='a"+b+"' style='font-family: Lobster;'>"+Buchstabe[b]+"</span>")}farbschrift()}var a=1;function farbverlauf(){for(var b=0;b<farben.length;b++){farben[b-1]=farben[b]}farben[farben.length-1]=farben[-1];setTimeout("farbschrift()",30)}var farbsatz=1;function farbtauscher(){farben=farbbibliothek[farbsatz];while(farben.length<text.length){farben=farben.concat(farben)}farbsatz=Math.floor(Math.random()*(farbbibliothek.length-0.0001))}setInterval("farbtauscher()",5000);
+function farbschrift(){for(var b=0;b<Buchstabe.length;b++){document.all["a"+b].style.color=farben[b]}farbverlauf()}function string2array(b){Buchstabe=new Array();while(farben.length<b.length){farben=farben.concat(farben)}k=0;while(k<=b.length){Buchstabe[k]=b.charAt(k);k++}}function divserzeugen(){for(var b=0;b<Buchstabe.length;b++){document.write("<span id='a"+b+"' class='a"+b+"'>"+Buchstabe[b]+"</span>")}farbschrift()}var a=1;function farbverlauf(){for(var b=0;b<farben.length;b++){farben[b-1]=farben[b]}farben[farben.length-1]=farben[-1];setTimeout("farbschrift()",30)}var farbsatz=1;function farbtauscher(){farben=farbbibliothek[farbsatz];while(farben.length<text.length){farben=farben.concat(farben)}farbsatz=Math.floor(Math.random()*(farbbibliothek.length-0.0001))}setInterval("farbtauscher()",5000);
 
-text= "Lưu Gia Bảo"; //h
+text= "Bùi Diệu Nhật Uyên"; //h
 string2array(text);
 divserzeugen();
 //document.write(text);
-</script></div> 
+</script></div>
     <div class="letterForm">
       <input type="checkbox" id="mess">
       <div class="content">
