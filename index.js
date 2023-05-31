@@ -1,23 +1,13 @@
-const contentLetterSrart_actived = "Hãy nói gì đó ở đây trước khi người ấy mở bức thư nhé." //Lời mở đầu cho bức thư
-const mainContentLetter = "đọt caaụk." //Nội dung của bức thư
-const audioContainer = document.createElement("div");
-audioContainer.classList.add("audio-container");
-const audio = document.createElement("audio");
-audio.src = "https://files.catbox.moe/stmi8k.mp3";
-audio.controls = true;
-audioContainer.appendChild(audio);
-
-const mainContentContainer = document.querySelector(".mainContent");
-mainContentContainer.innerHTML = mainContentLetter;
-mainContentContainer.appendChild(audioContainer);
+const contentLetterSrart_actived = "Hãy nói gì đó âở bức thư nhé." //Lời mở đầu cho bức thư
+const mainContentLetter = "happt " //Nội dung của bức thư
 
 // Gắn 1 đường link ảnh bất kì
 let imgStart = document.querySelector(".myAI"); //Hình ảnh xuất hiện trong lời mở đầu của bức thư
-imgStart.src = "./img/cute-young-boy-kid-wearing-vest-and-hat-free-png.png";
+imgStart.src = "https://i.imgur.com/5ckh054.jpg";
 
 // Gắn 1 link ảnh bất kì
 let imgLetter = document.querySelector(".img");
-imgLetter.src = "./img/b4bbdb54b7152338d7143cb444a77f09.png"; //Hình ảnh xuất hiện trong nội dung của bức thư sau khi bức thư được viết ra hết
+imgLetter.src = "https://i.imgur.com/Fe9JfTw.jpg"; //Hình ảnh xuất hiện trong nội dung của bức thư sau khi bức thư được viết ra hết
 
 const splitContentLetterSrart_actived = contentLetterSrart_actived.split("");
 
