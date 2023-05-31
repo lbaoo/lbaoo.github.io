@@ -1,4 +1,4 @@
-const contentLetterSrart_actived = "Hãy nói gì đó âở bức thư nhé." //Lời mở đầu cho bức thư
+const contentLetterSrart_actived = "Chúc mừng sinh nhật bét fen =))!" //Lời mở đầu cho bức thư
 const mainContentLetter = "happt " //Nội dung của bức thư
 
 // Gắn 1 đường link ảnh bất kì
