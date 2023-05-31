@@ -1,5 +1,15 @@
 const contentLetterSrart_actived = "Hãy nói gì đó ở đây trước khi người ấy mở bức thư nhé." //Lời mở đầu cho bức thư
-const mainContentLetter = "đọt caaụk. <div class='audio-container'><audio src='https://files.catbox.moe/stmi8k.mp3' controls></audio></div>" //Nội dung của bức thư
+const mainContentLetter = "đọt caaụk." //Nội dung của bức thư
+const audioContainer = document.createElement("div");
+audioContainer.classList.add("audio-container");
+const audio = document.createElement("audio");
+audio.src = "https://files.catbox.moe/stmi8k.mp3";
+audio.controls = true;
+audioContainer.appendChild(audio);
+
+const mainContentContainer = document.querySelector(".mainContent");
+mainContentContainer.innerHTML = mainContentLetter;
+mainContentContainer.appendChild(audioContainer);
 
 // Gắn 1 đường link ảnh bất kì
 let imgStart = document.querySelector(".myAI"); //Hình ảnh xuất hiện trong lời mở đầu của bức thư
