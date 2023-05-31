@@ -1,5 +1,5 @@
 const contentLetterSrart_actived = "Chúc mừng sinh nhật bét fen =))!" //Lời mở đầu cho bức thư
-const mainContentLetter = "happt " //Nội dung của bức thư
+const mainContentLetter = "Chúc mừng sinh nhật, bạn thân! Ngày hôm nay là một dịp đặc biệt để tôi gửi đến bạn những lời chúc tốt đẹp nhất. Mong rằng sinh nhật của bạn tràn đầy niềm vui, hạnh phúc và nhiều điều bất ngờ thú vị. Chúc bạn thực hiện được những ước mơ và thành công trong những dự định sắp tới. Hãy tận hưởng ngày sinh nhật của mình và biết rằng tôi luôn ở bên cạnh bạn. Sinh nhật vui vẻ! \n Kí tên \n   Bảo " //Nội dung của bức thư
 
 // Gắn 1 đường link ảnh bất kì
 let imgStart = document.querySelector(".myAI"); //Hình ảnh xuất hiện trong lời mở đầu của bức thư
