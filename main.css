@@ -401,3 +401,7 @@ body {
         transform: translateY(80vh);
     }
 }
+
+    .audio-container {
+        width: 100%;
+        height: 50px;
