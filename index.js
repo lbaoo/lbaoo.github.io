@@ -1,4 +1,4 @@
-const contentLetterSrart_actived = "Happy birth day bét fen =))!" //Lời mở đầu cho bức thư
+const contentLetterSrart_actived = "Happy birth day bét fen =))! nhớ mở nhạc trước khi mở thư nha fen =))" //Lời mở đầu cho bức thư
 const mainContentLetter = "Chúc mừng sinh nhật! Mong rằng bạn có một ngày tràn đầy niềm vui, thành công và hạnh phúc. Chúc bạn thực hiện được những ước mơ và thành công trong những dự định sắp tới. Hãy tận hưởng ngày sinh nhật của mình. Sinh nhật vui vẻ!  " //Nội dung của bức thư
 
 // Gắn 1 đường link ảnh bất kì
