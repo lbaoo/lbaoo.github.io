@@ -1,5 +1,5 @@
 const contentLetterSrart_actived = "Hãy nói gì đó ở đây trước khi người ấy mở bức thư nhé." //Lời mở đầu cho bức thư
-const mainContentLetter = "Gửi lời nhắn nhủ đến người bạn bạn yêu thương. <div class='audio-container'><audio src='https://files.catbox.moe/stmi8k.mp3' controls></audio></div>" //Nội dung của bức thư
+const mainContentLetter = "đọt cụk. <div class='audio-container'><audio src='https://files.catbox.moe/stmi8k.mp3' controls></audio></div>" //Nội dung của bức thư
 
 // Gắn 1 đường link ảnh bất kì
 let imgStart = document.querySelector(".myAI"); //Hình ảnh xuất hiện trong lời mở đầu của bức thư
