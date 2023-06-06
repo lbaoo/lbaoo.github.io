@@ -52,6 +52,78 @@
       z-index: 99999
     }
 
+.glow-on-hover {
+    width: 150px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+text-shadow: 2px 2px blue;
+
+}
+
+.button-container {
+	display: flex;
+	justify-content: center;
+}
+
+.glow-on-hover:before {
+    content: '';
+
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+    
     .loader-inner {
       bottom: 0;
       height: 60px;
@@ -390,21 +462,6 @@
       transform: rotate(360deg)
     }
 
-    .audio {
-  padding: 0px 0;
-  width: 75%;
-  border: 2px solid #4facfe;
-  color: #4facfe;
-  text-decoration: none;
-  text-align: center;
-  font-size: 0rem;
-  letter-spacing: 0px;
-  text-transform: uppercase;
-  margin-left: 0px;
-  border-radius: 100px;
-}
-
-    
     .linked {
       position: relative;
       margin: 0 auto;
@@ -614,15 +671,34 @@ divserzeugen();
           </span>
         </div>
         <p id='bio'>&#8220; Có công mài sắt có ngày nên kim ! "</p>
-        <div class='center'>
+        
+        <!-- contact -->
+        <div class="flex-both-center mt-32">
+        <audio id="myAudio">
+		<source src="music.ogg" type="audio/ogg">
+		<source src="music.mp3" type="audio/mpeg">
+	</audio>
+  <p class="button-container">
+	<button class="glow-on-hover" onclick="playAudio()" type="button">Play Music</button>&nbsp;&nbsp;
+	<button class="glow-on-hover" onclick="pauseAudio()" type="button">Stop Music</button> 
+</div>
+<div class="mt-32">
+
+<script>
+var x = document.getElementById("myAudio"); 
+
+function playAudio() { 
+  x.play(); 
+} 
+
+function pauseAudio() { 
+  x.pause(); 
+} 
+</script>
+  <div class='center'>
           <div class='border'></div>
           <p id='contact-text'>Contact for work</p>
         </div>
-        <!-- contact -->
-        <div class='center boxs' id='boxs'>
-        <audio controls class="audio">
-  <source src="https://files.catbox.moe/stmi8k.mp3" type="audio/mpeg">
-</audio>
           <!-- facebook -->
           
           <div class='box facebook'>
