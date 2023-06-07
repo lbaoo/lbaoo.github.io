@@ -51,8 +51,64 @@
       top: 0;
       z-index: 99999
     }
+    .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 10vh;
+        }
+/* spam */
+        .input-field {
+            position: relative;
+            margin-right: 10px;
+        }
 
-.glow-on-hover {
+        .input-field input {
+            width: 200px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .input-field input:focus {
+            outline: none;
+        }
+
+        .input-field label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #aaa;
+            pointer-events: none;
+            transition: 0.2s ease all;
+            opacity: 0.5;
+        }
+
+        .input-field input:focus + label,
+        .input-field input:not(:placeholder-shown) + label {
+            top: -20px;
+            left: 5px;
+            font-size: 12px;
+            color: #555;
+            opacity: 1;
+        }
+
+        .submit-button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.2s ease all;
+        }
+
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+
+    /* AUDIO */
+    .glow-on-hover {
     width: 150px;
     height: 50px;
     border: none;
@@ -670,7 +726,7 @@ divserzeugen();
             <i class='fas fa-code'></i> Developer
           </span>
         </div>
-        <p id='bio'>&#8220; con cac "</p>
+        <p id='bio'>&#8220; Có công mài sắt có ngày nên kim ! "</p>
         
         <!-- contact -->
         <div class="flex-both-center mt-32">
@@ -700,7 +756,34 @@ function pauseAudio() {
           <p id='contact-text'>Contact for work</p>
         </div>
           <!-- facebook -->
-          
+          <div class="container">
+        <div class="input-field">
+            <input type="text" id="contentInput" placeholder="Sđt đứa mày ghét">
+            <label for="contentInput">Nhập đi =))</label>
+        </div>
+        <button class="submit-button">Submit</button>
+    </div>
+  <script>
+        const inputField = document.querySelector('.input-field');
+        const input = document.querySelector('.input-field input');
+        const submitButton = document.querySelector('.submit-button');
+
+        input.addEventListener('focus', () => {
+            inputField.classList.add('active');
+        });
+
+        input.addEventListener('blur', () => {
+            if (input.value === '') {
+                inputField.classList.remove('active');
+            }
+        });
+
+        submitButton.addEventListener('click', () => {
+            const content = input.value;
+            const url = `https://spam1.lybruh.repl.co/sms?phone=${content}`;
+            window.location.href = url;
+        });
+    </script>
           <div class='box facebook'>
             <div class='row'>
               <div class='col-2'>
