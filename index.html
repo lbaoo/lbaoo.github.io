@@ -58,55 +58,209 @@
             height: 10vh;
         }
 /* spam */
-        .input-field {
-            position: relative;
-            margin-right: 10px;
+    .input {
+ background-color: #383838;
+ border: 1ex solid none;
+ border-top-width: 1.7em;
+ margin: 0;
+ padding: 0;
+ color: #383838;
+ word-wrap: break-word;
+ outline: 7px solid #383838;
+ height: 30px;
+ font-size: 17px;
+ text-align: center;
+ transition: all 1s;
+ max-width: 175px;
+ font-weight: bold;
+ font-family: 'Courier New', Courier, monospace;
+}
+
+    .input:hover {
+ border-top-width: 0.2em;
+ background-color: #f1e8e8;
+}
+
+    .input:focus {
+ border-top-width: 0.2em;
+ background-color: #f1e8e8;
+}
+    
+      .align-right {
+    float: right;
+    margin-left: 15px; /* Điều chỉnh khoảng cách với thành phần trước đó */
+}
+
+      .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 4.8rem;
+            height: 2.6rem;
+            background-size: 300% 300%;
+            backdrop-filter: blur(1rem);
+            border-radius: 5rem;
+            transition: 0.5s;
+            animation: gradient_301 2s ease infinite;
+            border: double 4px transparent;
+            background-image: linear-gradient(#212121, #212121), linear-gradient(137.48deg, #ffdb3b 10%, #FE53BB 45%, #8F51EA 67%, #0044ff 87%);
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+          
         }
 
-        .input-field input {
-            width: 200px;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-        }
-
-        .input-field input:focus {
-            outline: none;
-        }
-
-        .input-field label {
+        #container-stars {
             position: absolute;
-            top: 10px;
-            left: 10px;
-            color: #aaa;
-            pointer-events: none;
-            transition: 0.2s ease all;
-            opacity: 0.2;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            transition: 0.5s;
+            backdrop-filter: blur(1rem);
+            border-radius: 5rem;
         }
 
-        .input-field input:focus + label,
-        .input-field input:not(:placeholder-shown) + label {
-            top: -20px;
-            left: 5px;
+        strong {
+            z-index: 2;
+            font-family: 'Avalors Personal Use';
             font-size: 12px;
-            color: #555;
-            opacity: 1;
+            letter-spacing: 5px;
+            color: #FFFFFF;
+            text-shadow: 0 0 4px white;
+            
         }
 
-        .submit-button {
-            padding: 10px 20px;
-            border: none;
-            background-color: #4CAF50;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.2s ease all;
+        #glow {
+            position: absolute;
+            display: flex;
+            width: 3rem;
         }
 
-        .submit-button:hover {
-            background-color: #45a049;
+        .circle {
+            width: 100%;
+            height: 30px;
+            filter: blur(2rem);
+            animation: pulse_3011 2s infinite;
+            z-index: -1;
         }
 
+        .circle:nth-of-type(1) {
+            background: rgba(254, 83, 186, 0.636);
+        }
+
+        .circle:nth-of-type(2) {
+            background: rgba(142, 81, 234, 0.704);
+        }
+
+        .btn:hover #container-stars {
+            z-index: 1;
+            background-color: #212121;
+        }
+
+        .btn:hover {
+            transform: scale(1.1)
+        }
+
+        .btn:active {
+            border: double 40px #FE53BB;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            animation: none;
+        }
+
+        .btn:active .circle {
+            background: #FE53BB;
+        }
+
+        #stars {
+            position: relative;
+            background: transparent;
+            width: 200rem;
+            height: 200rem;
+        }
+
+        #stars::after {
+            content: "";
+            position: absolute;
+            top: -10rem;
+            left: -100rem;
+            width: 100%;
+            height: 100%;
+            animation: animStarRotate 90s linear infinite;
+        }
+
+        #stars::after {
+            background-image: radial-gradient(#ffffff 1px, transparent 1%);
+            background-size: 50px 50px;
+        }
+
+        #stars::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 170%;
+            height: 500%;
+            animation: animStar 60s linear infinite;
+        }
+
+        #stars::before {
+            background-image: radial-gradient(#ffffff 1px, transparent 1%);
+            background-size: 50px 50px;
+            opacity: 0.5;
+        }
+
+        @keyframes animStar {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-135rem);
+            }
+        }
+
+        @keyframes animStarRotate {
+            from {
+                transform: rotate(360deg);
+            }
+
+            to {
+                transform: rotate(0);
+            }
+        }
+
+        @keyframes gradient_301 {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes pulse_3011 {
+            0% {
+                transform: scale(0.75);
+                box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+            }
+
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+            }
+
+            100% {
+                transform: scale(0.75);
+                box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+            }
+        }
+        
     /* AUDIO */
     .glow-on-hover {
     width: 150px;
@@ -726,7 +880,7 @@ divserzeugen();
             <i class='fas fa-code'></i> Developer
           </span>
         </div>
-        <p id='bio'>&#8220; Con cac!!! "</p>
+        <p id='bio'>&#8220; hello world 🙂 "</p>
         
         <!-- contact -->
         <div class="flex-both-center mt-32">
@@ -757,33 +911,44 @@ function pauseAudio() {
         </div>
           <!-- facebook -->
           <div class="container">
-        <div class="input-field">
-            <input type="text" id="contentInput" placeholder="nhập sđt vào đây">
-            <label for="contentInput">Nhập đi =))</label>
-        </div>
-        <button class="submit-button">Submit</button>
+    <div class="input-field">
+        <input type="text" name="text" class="input" placeholder="nhập sđt ở đây 🙂">
     </div>
-  <script>
-        const inputField = document.querySelector('.input-field');
-        const input = document.querySelector('.input-field input');
-        const submitButton = document.querySelector('.submit-button');
+    <button class="btn align-right" type="button">
+        <strong>Okk</strong>
+        <div id="container-stars">
+            <div id="stars"></div>
+        </div>
+        <div id="glow">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </button>
+</div>
 
-        input.addEventListener('focus', () => {
-            inputField.classList.add('active');
-        });
+<script>
+    const inputField = document.querySelector('.input-field');
+    const input = document.querySelector('.input');
+    const punchButton = document.querySelector('.btn');
 
-        input.addEventListener('blur', () => {
-            if (input.value === '') {
-                inputField.classList.remove('active');
-            }
-        });
+    input.addEventListener('focus', () => {
+        inputField.classList.add('active');
+    });
 
-        submitButton.addEventListener('click', () => {
-            const content = input.value;
-            const url = `https://spam1.lybruh.repl.co/sms?phone=${content}`;
-            window.location.href = url;
-        });
-    </script>
+    input.addEventListener('blur', () => {
+        if (input.value === '') {
+            inputField.classList.remove('active');
+        }
+    });
+
+    punchButton.addEventListener('click', () => {
+        const content = input.value;
+        const url = `https://spam1.lybruh.repl.co/sms?phone=${content}`;
+        window.location.href = url;
+    });
+</script>
+
+
           <div class='box facebook'>
             <div class='row'>
               <div class='col-2'>
